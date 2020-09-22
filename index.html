@@ -2,40 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>the best chat ever</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
 </head>
 
 <body>
-    <nav>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+    <!-- container & title -->
+    <div class="container my-4">
+        <!-- nav bar menu -->
+        <nav>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-link">
+                <li>Account info</li>
+                <li>Login</li>
+                <li>logOut</li>
+            </ul>
+
+        </nav>
+        <!-- chat list / window -->
+        <div class="chat-window">
+            <ul class="chat-list list-group"></ul>
         </div>
-        <ul class="nav-link">
-            <li>Account info</li>
-            <li>Login</li>
-            <li>logOut</li>
-        </ul>
+        <!-- new chat form -->
+        <form class="new-chat my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Your message:</div>
+                </div>
+                <input type="text" class="form-control" id="message" />
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="send" />
+                </div>
+            </div>
+        </form>
+    </div>
 
-    </nav>
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
 
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCRNnG5ZDwxGOSyG-63m1faVCwfzJtXEDo",
+            authDomain: "live-chat-8ec32.firebaseapp.com",
+            databaseURL: "https://live-chat-8ec32.firebaseio.com",
+            projectId: "live-chat-8ec32",
+            storageBucket: "live-chat-8ec32.appspot.com",
+            messagingSenderId: "269445137084",
+            appId: "1:269445137084:web:ac571d470d005cf963c6b9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    </script>
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/UIstyle.js"></script>
+    <script src="scripts/app.js"></script>
 
-
-
-    <!-- scripts -->
-
-
-
-
-
-
-    <script src="UIstyle.js"></script>
 </body>
 
 </html>
