@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+
 
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
@@ -13,27 +12,84 @@
 
 <body>
     <!-- container & title -->
-    <div class="container my-4">
-        <!-- nav bar menu -->
-        <nav>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul class="nav-link">
-                <li>Account info</li>
-                <li>Login</li>
-                <li>logOut</li>
-            </ul>
 
-        </nav>
-        <!-- chat list / window -->
-        <div class="chat-window">
-            <ul class="chat-list list-group"></ul>
+    <!-- nav bar menu -->
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-        <!-- new chat form -->
-        <form class="new-chat my-3">
+        <ul class="nav-link">
+            <li id="accountInfoBTN" class="account-info">Account info</li>
+            <li id="loginBTN" class="loginBTN">Login</li>
+            <li id="logoutBTN" class="logoutBTN">logOut</li>
+        </ul>
+    </nav>
+
+    <!-- modal account info -->
+
+    <div id="accountInfoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBTN">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <p>Hello I'm a modal</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt cumque distinctio unde
+                    architecto consequuntur illum dolorum reprehenderit sint amet! Ullam libero hic nemo.</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal logIn -->
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBTN">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <p>Hello I'm a modal</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt cumque distinctio unde
+                    architecto consequuntur illum dolorum reprehenderit sint amet! Ullam libero hic nemo.</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal logOut -->
+
+    <div id="loginout" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBTN">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <p>Hello I'm a modal</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt cumque distinctio unde
+                    architecto consequuntur illum dolorum reprehenderit sint amet! Ullam libero hic nemo.</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- chat list / window -->
+    <!-- <div class="chat-window">
+            <ul class="chat-list list-group"></ul> -->
+    </div>
+    <!-- new chat form -->
+    <!-- <form class="new-chat my-3">
             <div class="input-group">
                 <div class="input-group-prepend">
                     <div class="input-group-text">Your message:</div>
@@ -44,7 +100,7 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div> -->
 
     <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
 
