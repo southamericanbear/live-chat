@@ -30,7 +30,8 @@ li {
 
 .account-info,
 .loginBTN,
-.logoutBTN {
+.logoutBTN,
+.sign-in {
   cursor: pointer;
 }
 

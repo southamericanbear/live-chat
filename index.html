@@ -21,27 +21,48 @@
             <div class="line"></div>
         </div>
         <ul class="nav-link">
-            <li id="accountInfoBTN" class="account-info">Account info</li>
-            <li id="loginBTN" class="loginBTN">Login</li>
-            <li id="logoutBTN" class="logoutBTN">logOut</li>
+            <li id="signInBTN" class="sign-in logged-out">Sign in</li>
+            <li id="accountInfoBTN" class="account-info logged-in">Account info</li>
+            <li id="loginBTN" class="loginBTN logged-out">Login</li>
+            <li id="logoutBTN" class="logoutBTN logged-in">logOut</li>
         </ul>
     </nav>
+
+    <!-- signin modal -->
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="signInCloseBTN" class="closeBTN">&times;</span>
+                <h2>Sign In</h2>
+            </div>
+            <form id="signin">
+                <div class="input-field">
+                    <input type="email" id="signin-email" required>
+                    <label for="signin-email">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="signin-username" required>
+                    <label for="signin-username">Choose username</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="signin-password">
+                    <label for="signin-password">Choose password</label>
+                </div>
+                <button class="btn">Sign in</button>
+            </form>
+        </div>
+    </div>
+
 
     <!-- modal account info -->
 
     <div id="accountInfoModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="closeBTN">&times;</span>
-                <h2>Modal Header</h2>
+                <span id="accountCloseBTN" class="closeBTN">&times;</span>
+                <h2>Account info</h2>
             </div>
-            <div class="modal-body">
-                <p>Hello I'm a modal</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt cumque distinctio unde
-                    architecto consequuntur illum dolorum reprehenderit sint amet! Ullam libero hic nemo.</p>
-            </div>
-            <div class="modal-footer">
-                <h3>Modal Footer</h3>
+            <div class="modal-body account-info-body">
             </div>
         </div>
     </div>
@@ -51,38 +72,24 @@
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="closeBTN">&times;</span>
-                <h2>Modal Header</h2>
+                <span id="loginCloseBTN" class="closeBTN">&times;</span>
+                <h2>Login</h2>
             </div>
-            <div class="modal-body">
-                <p>Hello I'm a modal</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt cumque distinctio unde
-                    architecto consequuntur illum dolorum reprehenderit sint amet! Ullam libero hic nemo.</p>
-            </div>
-            <div class="modal-footer">
-                <h3>Modal Footer</h3>
-            </div>
+            <form id="login">
+                <div class="input-field">
+                    <input type="email" id="login-email" required>
+                    <label for="login-email">Email address</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password">
+                    <label for="login-password">Password</label>
+                </div>
+                <button class="btn">Login</button>
+            </form>
         </div>
     </div>
 
-    <!-- modal logOut -->
 
-    <div id="loginout" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="closeBTN">&times;</span>
-                <h2>Modal Header</h2>
-            </div>
-            <div class="modal-body">
-                <p>Hello I'm a modal</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deserunt cumque distinctio unde
-                    architecto consequuntur illum dolorum reprehenderit sint amet! Ullam libero hic nemo.</p>
-            </div>
-            <div class="modal-footer">
-                <h3>Modal Footer</h3>
-            </div>
-        </div>
-    </div>
 
     <!-- chat list / window -->
     <!-- <div class="chat-window">
