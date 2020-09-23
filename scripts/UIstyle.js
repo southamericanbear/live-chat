@@ -11,37 +11,65 @@ hamburger.addEventListener("click", () => {
 });
 
 // modal triggers
-const closeBTN = document.querySelector(".closeBTN");
-const modal = document.querySelector(".modal");
-const accountInfoBTN = document.getElementById("accountInfoBTN");
-const logInBTN = document.getElementById("loginBTN");
-const logOutBTN = document.getElementById("logoutBTN");
 
-// account info modal
-accountInfoBTN.addEventListener("click", (e) => {
+// signin modal
+const signInBTN = document.getElementById("signInBTN");
+signInBTN.addEventListener("click", (e) => {
   e.preventDefault();
-  modal.style.display = "block";
+  signInModal.style.display = "block";
 });
 
-// login modal
-logInBTN.addEventListener("click", (e) => {
+const signInCloseBTN = document.getElementById("signInCloseBTN");
+signInCloseBTN.addEventListener("click", (e) => {
   e.preventDefault();
-  modal.style.display = "block";
-});
-
-// logout modal
-logOutBTN.addEventListener("click", (e) => {
-  e.preventDefault();
-  modal.style.display = "block";
-});
-
-closeBTN.addEventListener("click", (e) => {
-  e.preventDefault();
-  modal.style.display = "none";
+  signInModal.style.display = "none";
 });
 
 window.addEventListener("click", (e) => {
-  if (e.target == modal) {
-    modal.style.display = "none";
+  if (e.target == signInModal) {
+    signInModal.style.display = "none";
+  }
+});
+
+// account info modal
+const accountInfoBTN = document.getElementById("accountInfoBTN");
+
+accountInfoBTN.addEventListener("click", (e) => {
+  e.preventDefault();
+  accountInfoModal.style.display = "block";
+});
+
+const accountCloseBTN = document.getElementById("accountCloseBTN");
+
+accountCloseBTN.addEventListener("click", (e) => {
+  e.preventDefault();
+  accountInfoModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target == accountInfoModal) {
+    accountInfoModal.style.display = "none";
+  }
+});
+
+// login modal
+
+const loginBTN = document.getElementById("loginBTN");
+
+loginBTN.addEventListener("click", (e) => {
+  e.preventDefault();
+  loginModal.style.display = "block";
+});
+
+const loginCloseBTN = document.getElementById("loginCloseBTN");
+
+loginCloseBTN.addEventListener("click", (e) => {
+  e.preventDefault();
+  loginModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target == loginModal) {
+    loginModal.style.display = "none";
   }
 });

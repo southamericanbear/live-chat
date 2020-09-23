@@ -123,10 +123,14 @@ body {
 .modal-content {
   background-color: #f4f4f4;
   margin: 20% auto;
-  width: 70%;
+  width: 500px;
+  height: 300px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
   animation-duration: 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal-header h2,
@@ -136,12 +140,38 @@ body {
 
 .modal-header {
   background: coral;
+  width: 100%;
   padding: 15px;
   color: white;
 }
 
 .modal-body {
   padding: 10px 20px;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-field {
+  padding-right: 31px;
+}
+
+.email-field-login {
+  padding-left: 30.5px;
+}
+
+.password-field {
+  padding-right: 1.8px;
+}
+
+input {
+  width: 200px;
 }
 
 .modal-footer {
