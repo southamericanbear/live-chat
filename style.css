@@ -5,11 +5,21 @@
 }
 body {
   font-family: sans-serif;
+  background: rgb(255, 216, 202);
+}
+.container {
+  width: 100%;
+  max-width: 554.5px;
+
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
 }
 /* navbar and hamburger toggle */
 nav {
-  height: 10vh;
-  background: purple;
+  height: 50px;
+  width: 100%;
+  background: coral;
 }
 
 .nav-link {
@@ -119,12 +129,17 @@ body {
   overflow: auto;
   background: rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 400px;
+  }
+}
 
 .modal-content {
   border-radius: 10px;
   background-color: #f4f4f4;
-  margin: 8% auto;
-  width: 500px;
+  margin: 100px auto;
+  width: 450px;
   height: 300px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
   animation-name: modalopen;
@@ -132,6 +147,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 400px;
+  }
 }
 
 .modal-header h2,
@@ -237,4 +258,57 @@ input {
 input:focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+
+/* chat list window stuff */
+
+.chat-window {
+  background: rgb(243, 210, 198);
+  width: 100%;
+}
+
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recived-msg,
+.sended-msg {
+  background-color: rgba(253, 199, 177, 0.842);
+  color: rgb(146, 90, 69);
+  font-size: 12px;
+  font-weight: 600;
+  width: 50%;
+  padding: 5%;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.recived-msg {
+  margin-left: 50px;
+}
+
+.sended-msg {
+  margin-right: 50px;
+}
+
+.new-chat {
+  background-color: rgb(231, 162, 137);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 25px;
+}
+
+.input-group {
+  display: flex;
+}
+
+.form-control {
+  width: 300px;
+  height: 39.5px;
+  border-radius: 0.25rem;
+  background-color: rgba(252, 241, 237, 0.842);
+  color: rgb(146, 90, 69);
 }
