@@ -1,3 +1,12 @@
+// listen for auth status changes
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    setupUI(user);
+  } else {
+    setupUI();
+  }
+});
+
 // create new user
 const signupForm = document.querySelector("#signin");
 
