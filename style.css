@@ -323,3 +323,8 @@ input:focus {
   background-color: rgba(252, 241, 237, 0.842);
   color: rgb(146, 90, 69);
 }
+
+.error {
+  color: coral;
+  text-align: center;
+}
