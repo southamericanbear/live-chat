@@ -39,13 +39,14 @@ loginForm.addEventListener("submit", (e) => {
     .signInWithEmailAndPassword(email, password)
     .then((cred) => {
       console.log(`Logged in as ${email}`);
+      logInclose();
+      logIncloseEnter();
       loginForm.reset();
       loginForm.querySelector(".error").innerHTML = "";
     })
     .catch((err) => {
       loginForm.querySelector(".error").innerHTML = err.message;
     });
-  logInclose();
 });
 
 // logout

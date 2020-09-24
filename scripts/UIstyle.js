@@ -12,8 +12,30 @@ hamburger.addEventListener("click", () => {
 
 // modal triggers
 
+// account info modal
+const accountInfoBTN = document.getElementById("accountInfoBTN");
+
+accountInfoBTN.addEventListener("click", (e) => {
+  e.preventDefault();
+  accountInfoModal.style.display = "block";
+});
+
+const accountCloseBTN = document.getElementById("accountCloseBTN");
+
+accountCloseBTN.addEventListener("click", (e) => {
+  e.preventDefault();
+  accountInfoModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target == accountInfoModal) {
+    accountInfoModal.style.display = "none";
+  }
+});
+
 // signin modal
 const signInBTN = document.getElementById("signInBTN");
+
 signInBTN.addEventListener("click", (e) => {
   e.preventDefault();
   signInModal.style.display = "block";
@@ -43,27 +65,6 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// account info modal
-const accountInfoBTN = document.getElementById("accountInfoBTN");
-
-accountInfoBTN.addEventListener("click", (e) => {
-  e.preventDefault();
-  accountInfoModal.style.display = "block";
-});
-
-const accountCloseBTN = document.getElementById("accountCloseBTN");
-
-accountCloseBTN.addEventListener("click", (e) => {
-  e.preventDefault();
-  accountInfoModal.style.display = "none";
-});
-
-window.addEventListener("click", (e) => {
-  if (e.target == accountInfoModal) {
-    accountInfoModal.style.display = "none";
-  }
-});
-
 // login modal
 
 const loginBTN = document.getElementById("loginBTN");
@@ -73,24 +74,26 @@ loginBTN.addEventListener("click", (e) => {
   loginModal.style.display = "block";
 });
 
+const loginCloseBTN = document.getElementById("loginCloseBTN");
+loginCloseBTN.addEventListener("click", (e) => {
+  e.preventDefault();
+  loginModal.style.display = "none";
+});
+
 const logInSubmit = document.querySelector(".logInSubmit");
 function logInclose() {
   logInSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     loginModal.style.display = "none";
   });
+}
+function logIncloseEnter() {
   logInSubmit.addEventListener("keyup", (e) => {
     e.preventDefault();
     loginModal.style.display = "none";
   });
+  console.log(69);
 }
-
-const loginCloseBTN = document.getElementById("loginCloseBTN");
-
-loginCloseBTN.addEventListener("click", (e) => {
-  e.preventDefault();
-  loginModal.style.display = "none";
-});
 
 window.addEventListener("click", (e) => {
   if (e.target == loginModal) {
