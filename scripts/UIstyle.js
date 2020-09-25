@@ -119,17 +119,3 @@ class ChatUI {
     this.list.innerHTML += html;
   }
 }
-
-// setup recived messeges
-// const setUpChats = (data) => {
-//   if (data.length) {
-//     let html = "";
-//     data.forEach((doc) => {
-//       const recived = doc.data();
-//       const li = `<li class="recived-msg"><span class="username">${recived.username}: </span> <span class="message">${recived.message}</span><div class="time">${when}</div>
-//       </li>`;
-//       html += li;
-//     });
-//   }
-// };
-fsfasf;
