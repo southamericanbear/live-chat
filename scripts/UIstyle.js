@@ -92,7 +92,6 @@ function logIncloseEnter() {
     e.preventDefault();
     loginModal.style.display = "none";
   });
-  console.log(69);
 }
 
 window.addEventListener("click", (e) => {
@@ -100,3 +99,36 @@ window.addEventListener("click", (e) => {
     loginModal.style.display = "none";
   }
 });
+
+// chat interface
+
+class ChatUI {
+  constructor(list) {
+    this.list = list;
+  }
+  clear() {
+    this.list.innerHTML = "";
+  }
+  render(data) {
+    let when = dateFns.distanceInWordsToNow(data.created_at.toDate(), {
+      addSuffix: true,
+    });
+    const html = `
+    <li class="sended-msg"><span class="username">${data.username}: </span> <span class="message">${data.message}</span><div class="time">${when}</div>
+    </li>`;
+    this.list.innerHTML += html;
+  }
+}
+
+// setup recived messeges
+// const setUpChats = (data) => {
+//   if (data.length) {
+//     let html = "";
+//     data.forEach((doc) => {
+//       const recived = doc.data();
+//       const li = `<li class="recived-msg"><span class="username">${recived.username}: </span> <span class="message">${recived.message}</span><div class="time">${when}</div>
+//       </li>`;
+//       html += li;
+//     });
+//   }
+// };

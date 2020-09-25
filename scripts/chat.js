@@ -17,17 +17,14 @@ class Chatroom {
   }
   getChats(callback) {
     this.chats.orderBy("created_at").onSnapshot((snapshot) => {
-      snapshot.doChanges().forEach((change) => {
+      snapshot.docChanges().forEach((change) => {
         if (change.type === "added") {
           callback(change.doc.data());
         }
       });
     });
   }
+  updateName(username) {
+    this.username = username;
+  }
 }
-
-const chatroom = new Chatroom("main", "alan");
-chatroom
-  .addChat("hello")
-  .then(() => console.log("chat added"))
-  .catch((err) => console.log(err));

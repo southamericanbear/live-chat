@@ -3,9 +3,23 @@ const loggedOutLinks = document.querySelectorAll(".logged-out");
 const loggedInLinks = document.querySelectorAll(".logged-in");
 const accountInfo = document.querySelector(".account-info-body");
 
+let getTheuser = (user) => {
+  if (user) {
+    db.collection("users")
+      .doc(user.uid)
+      .get()
+      .then((doc) => {
+        username = doc.data().username;
+        console.log(username);
+        console.log(69);
+      });
+  }
+};
+
+getTheuser();
+
 const setupUI = (user) => {
   if (user) {
-    console.log(user);
     db.collection("users")
       .doc(user.uid)
       .get()
